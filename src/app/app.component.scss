@@ -1,0 +1,15 @@
+.top{
+    padding: 1em;
+    display: flex;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+}
+a{
+    padding: 1em;
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+}

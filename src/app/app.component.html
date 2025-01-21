@@ -1,5 +1,5 @@
-<diV>
-  <h1>{{ title }}</h1>
+<header class="top">
+  <h1><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">{{ title }}</a></h1>
   <nav class="nav">
     <a routerLink="/characters" routerLinkActive="active" ariaCurrentWhenActive="page">Characters</a>
     <a routerLink="/houses" routerLinkActive="active" ariaCurrentWhenActive="page">Houses</a>
@@ -7,5 +7,5 @@
     <a routerLink="/staff" routerLinkActive="active" ariaCurrentWhenActive="page">Staff</a>
     <a routerLink="/spells" routerLinkActive="active" ariaCurrentWhenActive="page">Spells</a>
   </nav>
-</diV>
+</header>
 <router-outlet />
