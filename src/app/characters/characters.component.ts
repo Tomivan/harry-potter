@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
   styleUrl: './characters.component.scss',
+  imports: [CommonModule]
 })
 export class CharactersComponent {
   data: any = []
@@ -18,6 +20,7 @@ export class CharactersComponent {
  getCharacters(): void {
     this.appService.getAllCharacters().subscribe(
       (response: any) => {
+        console.log(response)
         this.data = response;
       },
       (error: any) => {

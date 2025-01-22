@@ -1,1 +1,12 @@
-<p>characters works!</p>
+<div class="characters" *ngFor="let data of data">
+    <div class="character">
+        <img [src]="data.image" alt=""/>
+        <div class="card">
+            <p>{{data.name}}</p>
+            <p>{{data.dateOfBirth}}</p>
+            <p>{{data.ancestry}}</p>
+            <p *ngIf="data.hogwartsStudent === true">Student</p>
+            <p>{{data.species}}</p>
+        </div>
+    </div>
+</div>
