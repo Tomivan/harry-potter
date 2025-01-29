@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-staff',
-  standalone: false,
+  imports: [CommonModule],
   templateUrl: './staff.component.html',
   styleUrl: './staff.component.scss'
 })
@@ -12,7 +13,7 @@ export class StaffComponent {
 
   constructor(private appService: AppService) {}
 
-  ngOnInIt(): void {
+  ngOnInit(): void {
     this.getStaff();
   }
 

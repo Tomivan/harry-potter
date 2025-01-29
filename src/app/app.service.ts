@@ -25,6 +25,20 @@ export class AppService {
     );
   }
 
+  getCharacterById(id:string) {
+    return this.http.get<any>(
+      environment.baseApiUrl + endPoint.getCharacter + "/"+ id
+    )
+    .pipe(
+      map((response) => {
+        return response
+      }),
+      catchError((err) => {
+        return err
+      })
+    );
+  }
+
   getAllStudentsInGriffindor() {
     return this.http.get<any>(
       environment.baseApiUrl + endPoint.getAllGryffindorStudents

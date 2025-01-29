@@ -1,1 +1,12 @@
-<p>students works!</p>
+<div class="students">
+    <div class="student" *ngFor="let data of data">
+        <img [src]="data.image" alt=""/>
+        <div class="card">
+            <p>{{data.name}}</p>
+            <p>{{data.dateOfBirth}}</p>
+            <p>{{data.ancestry}}</p>
+            <p>{{data.gender}}</p>
+            <p>{{data.species}}</p>
+        </div>
+    </div>
+</div>

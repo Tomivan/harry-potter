@@ -1,1 +1,17 @@
-<p>characters-info works!</p>
+<div class="detail" *ngIf="character">
+    <img [src]="character.image" alt=""/>
+    <div class="detail-box">
+        <p>{{character.name}}</p>
+        <p>{{character.dateOfBirth}}</p>
+        <p>{{character.gender}}</p>
+        <p>{{character.ancestry}}</p>
+        <p *ngIf="character.hogwartsStudent === true">Student</p>
+        <p>{{character.house}}</p>
+        <p>{{character.eyeColour}}</p>
+        <p>{{character.hairColour}}</p>
+        <p>{{character.patronus}}</p>
+        <p>{{character.wand.length}}inches, {{character.wand.core}}, {{character.wand.wood}}</p>
+        <p>{{character.species}}</p>
+        <p>{{character.actor}}</p>
+    </div>
+</div>

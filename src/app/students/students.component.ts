@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-students',
-  standalone: false,
+  imports: [CommonModule],
   templateUrl: './students.component.html',
   styleUrl: './students.component.scss'
 })
@@ -12,7 +13,7 @@ export class StudentsComponent {
 
   constructor(private appService:AppService) {}
 
-  ngOnInIt():void {
+  ngOnInit():void {
     this.getStudents();
   }
 

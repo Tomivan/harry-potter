@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-characters',
@@ -11,7 +12,10 @@ import { AppService } from '../app.service';
 export class CharactersComponent {
   data: any = []
 
-  constructor( private appService: AppService) {}
+  constructor( 
+    private appService: AppService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getCharacters();
@@ -27,5 +31,8 @@ export class CharactersComponent {
         console.error('Error fetching characters:', error); // Handle errors
       }
     );
+  }
+  viewCharacterInfo(id:string) {
+    this.router.navigate(['/characters', id])
   }
 }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-spells',
-  standalone: false,
+  imports: [CommonModule],
   templateUrl: './spells.component.html',
   styleUrl: './spells.component.scss'
 })
@@ -12,7 +13,7 @@ export class SpellsComponent {
 
   constructor(private appService: AppService) {}
 
-  ngOnInIt(): void {
+  ngOnInit(): void {
     this.getSpells()
   }
 

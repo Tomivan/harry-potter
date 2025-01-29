@@ -1,5 +1,6 @@
 export const endPoint = {
     getAllCharacters: "/api/characters",
+    getCharacter: "/api/character",
     getAllGryffindorStudents: "/api/characters/house/gryffindor",
     getAllSlytherinStudents: "/api/characters/house/slytherin",
     getAllHufflepuffStudents: "/api/characters/house/hufflepuff",

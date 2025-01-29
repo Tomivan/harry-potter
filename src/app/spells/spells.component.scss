@@ -1,0 +1,22 @@
+.spells{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 29vw;
+    height: 70vh;
+}
+.spell{
+    padding: 1em;
+    border: 1px solid #0000001e;
+    border-radius: 10px;
+    margin: 0 1% 2% 0;
+}
+
+.card {
+    border: none;
+    margin-top: 2%;
+}

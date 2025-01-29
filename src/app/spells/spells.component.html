@@ -1,1 +1,10 @@
-<p>spells works!</p>
+
+<div class="spells">
+    <div class="spell" *ngFor="let data of data">
+        <img [src]="data.image" alt=""/>
+        <div class="card">
+            <p>{{data.name}}</p>
+            <p>{{data.description}}</p>
+        </div>
+    </div>
+</div>

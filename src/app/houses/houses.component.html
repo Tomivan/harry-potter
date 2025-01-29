@@ -1,1 +1,50 @@
-<p>houses works!</p>
+<div class="hogwarts-houses">
+    <h1>Gryffindor</h1>
+    <div class="houses">
+        <div class="house" *ngFor="let data of gryffindorData">
+            <img [src]="data.image" alt=""/>
+            <div class="card">
+                <p>{{data.name}}</p>
+                <p>{{data.dateOfBirth}}</p>
+                <p>{{data.ancestry}}</p>
+                <p>{{data.gender}}</p>
+            </div>
+        </div>
+    </div>
+    <h1>Slytherin</h1>
+    <div class="houses">
+        <div class="house" *ngFor="let data of slytherinData">
+            <img [src]="data.image" alt=""/>
+            <div class="card">
+                <p>{{data.name}}</p>
+                <p>{{data.dateOfBirth}}</p>
+                <p>{{data.ancestry}}</p>
+                <p>{{data.gender}}</p>
+            </div>
+        </div>
+    </div>
+    <h1>Ravenclaw</h1>
+    <div class="houses">
+        <div class="house" *ngFor="let data of ravenclawData">
+            <img [src]="data.image" alt=""/>
+            <div class="card">
+                <p>{{data.name}}</p>
+                <p>{{data.dateOfBirth}}</p>
+                <p>{{data.ancestry}}</p>
+                <p>{{data.gender}}</p>
+            </div>
+        </div>
+    </div>
+    <h1>Hufflepuff</h1>
+    <div class="houses">
+        <div class="house" *ngFor="let data of hufflepuffData">
+            <img [src]="data.image" alt=""/>
+            <div class="card">
+                <p>{{data.name}}</p>
+                <p>{{data.dateOfBirth}}</p>
+                <p>{{data.ancestry}}</p>
+                <p>{{data.gender}}</p>
+            </div>
+        </div>
+    </div>
+</div>

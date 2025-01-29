@@ -6,10 +6,12 @@ import { SpellsComponent } from './spells/spells.component';
 import { StaffComponent } from './staff/staff.component';
 import { StudentsComponent } from './students/students.component';
 import { HomeComponent } from './home/home.component';
+import { CharactersInfoComponent } from './characters/characters-info/characters-info.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'characters', component: CharactersComponent },
+    { path: 'characters/:id', component: CharactersInfoComponent },
     { path: 'houses', component: HousesComponent },
     { path: 'spells', component: SpellsComponent },
     { path: 'students', component: StudentsComponent },

@@ -1,9 +1,10 @@
-<div class="characters" *ngFor="let data of data">
-    <div class="character">
+<div class="characters">
+    <div class="character" *ngFor="let data of data" (click)="viewCharacterInfo(data.id)">
         <img [src]="data.image" alt=""/>
         <div class="card">
             <p>{{data.name}}</p>
             <p>{{data.dateOfBirth}}</p>
+            <p>{{data.gender}}</p>
             <p>{{data.ancestry}}</p>
             <p *ngIf="data.hogwartsStudent === true">Student</p>
             <p>{{data.species}}</p>

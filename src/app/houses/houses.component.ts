@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-houses',
-  standalone: false,
+  imports: [CommonModule],
   templateUrl: './houses.component.html',
   styleUrl: './houses.component.scss'
 })
@@ -15,8 +16,11 @@ export class HousesComponent {
 
   constructor(private appService: AppService) {}
 
-  ngOnInIt(): void {
-    this.getSlytherinStudents()
+  ngOnInit(): void {
+    this.getSlytherinStudents();
+    this.getGryffindorStudents();
+    this.getHufflepuffStudents();
+    this.getRavenclawStudents();
   }
 
   getGryffindorStudents(): void {
